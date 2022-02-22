@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/rankingsFragment">
+
+    <fragment
+        android:id="@+id/pickPlayerFragment"
+        android:name="com.example.pennydrop.fragments.PickPlayersFragment"
+        android:label="fragment_pick_players"/>
+
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.example.pennydrop.fragments.GameFragment"
+        android:label="fragment_game"/>
+
+    <fragment
+        android:id="@+id/rankingsFragment"
+        android:name="com.example.pennydrop.fragments.RankingsFragment"
+        android:label="fragment_rankings"/>
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.pennydrop.fragments.SettingsFragment"
+        android:label="preferences"/>
+
+</navigation>

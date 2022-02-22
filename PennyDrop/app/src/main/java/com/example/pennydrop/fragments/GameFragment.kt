@@ -1,0 +1,41 @@
+package com.example.pennydrop.fragments
+
+import android.app.Application
+import android.os.Bundle
+import android.text.method.ScrollingMovementMethod
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
+import com.example.pennydrop.R
+import com.example.pennydrop.databinding.FragmentGameBinding
+import com.example.pennydrop.databinding.FragmentPickPlayersBinding
+import com.example.pennydrop.viewmodels.GameViewModel
+
+
+class GameFragment : Fragment() {
+
+    private val gameViewModel by activityViewModels<GameViewModel>()
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+
+        val binding = FragmentGameBinding.inflate(inflater, container, false).apply {
+
+            vm = gameViewModel
+
+            textCurrentTurnInfo.movementMethod = ScrollingMovementMethod()
+            lifecycleOwner = viewLifecycleOwner
+
+        }
+
+
+        // Inflate the layout for this fragment
+        return binding.root
+    }
+
+
+}
